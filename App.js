@@ -2,11 +2,18 @@
 import { useState } from 'react';
 import {StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
+/**
+ * The main component of the app.
+ * @returns {JSX.Element} The JSX element to be rendered.
+ */
 export default function App() {
 
   const [color,setColor] = useState("#000000");
   const [colorsq,setColorsq] = useState("#000000");
   
+  /**
+   * Generates a random color and sets it as the background color of the StatusBar.
+   */
   const generateRandomColor = () => {
     console.log("clicked");
     let randomColor = "#000000".replace(/0/g,function(){
@@ -14,6 +21,10 @@ export default function App() {
     });
     setColor(randomColor);
   }
+
+  /**
+   * Generates a random color and sets it as the background color of the box.
+   */
   const generateRandomColorSQ = () => {
     console.log("clickedSQ");
     let randomColor = "#000000".replace(/0/g,function(){
